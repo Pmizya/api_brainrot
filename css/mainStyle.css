@@ -1,6 +1,9 @@
 body {
     background-color: black;
     color:  white;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 
@@ -12,4 +15,32 @@ body {
 .slide-in.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.card.slide-in {
+  margin-bottom: 32px;
+}
+
+
+#video-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: #000;
+}
+
+
+.container {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
 }
