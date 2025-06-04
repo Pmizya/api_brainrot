@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <title>API Brainrot</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/mainStyle.css">
@@ -12,17 +12,20 @@
 
 <body>
   <video id="video-bg" autoplay muted loop playsinline>
-    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    <source src="./assets/img/home.mp4" type="video/mp4">
     Il tuo browser non supporta HTML5 video.
   </video>
 
   <div class="container text-center">
+    <h1 id="title" class="mb-3"></h1>
+
     <div class="d-flex justify-content-center mb-4">
-      <input type="text" id="search-input" class="form-control form-control-lg w-75"
-        placeholder="Il nome del brainrot...">
+      <input type="text" id="search-input" class="form-control form-control-lg w-75" placeholder="Il nome del Brainrot...">      
     </div>
 
-    <div id="card-row" class="row g-4 justify-content-center"></div>
+    <h2 id="errorMsg" class="text-danger mb-5"></h2>
+
+    <div id="card-row" class="row g-4 justify-content-center p-5"></div>
   </div>
 
 
