@@ -14,15 +14,13 @@
     <h3 id="error" style="color: red"></h3>
 
     <script>
-        const APIKEY = "kQM9J4VvmkOqiI65gNKf2d4Lb5JDqz5J"
-        
         let title = document.querySelector("#brainrotsNumber");
         let input = document.querySelector("#brainrotName");
         let results = document.querySelector("#results");
         let error = document.querySelector("#error");
 
         function brainrotShower(value=""){
-            fetch(`http://localhost/Brainrot/public_html/?name=${value}&apiKey=${APIKEY}`).then(r => r.json()).then(r => {
+            fetch(`http://localhost/Brainrot/public_html/?name=${value}&apiKey=kQM9J4VvmkOqiI65gNKf2d4Lb5JDqz5J`).then(r => r.json()).then(r => {
                 results.innerHTML = ""
                 error.innerHTML = "";
                 title.innerHTML = "";
