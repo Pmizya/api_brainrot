@@ -2,10 +2,10 @@
 
 require_once("../config.php");
 
-if(count($_GET) == 2){ //filter, apiKey
+if(count($_GET) == 2){ // [filter, apiKey]
     $filterBy = array_keys($_GET)[0];
 
-    if(checkAPIKey($_GET["apiKey"])){
+    if(checkAPIKey($_GET[array_keys($_GET)[1]])){ //apiKey
         if(in_array($filterBy, FILTER_BY)){
             $filterValue = clean($_GET[$filterBy]);
             
