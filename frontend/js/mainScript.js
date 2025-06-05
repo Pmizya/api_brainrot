@@ -1,3 +1,4 @@
+const API_ENDPOINT = "http://localhost/Brainrot/api/public_html"
 const APIKEY = "kQM9J4VvmkOqiI65gNKf2d4Lb5JDqz5J"
 
 const searchInput = document.getElementById("search-input")
@@ -7,7 +8,7 @@ const title = document.getElementById('title');
 const errorMsg = document.getElementById('errorMsg');
 
 function brainrotShower(value=""){
-    fetch(`http://localhost/Brainrot/api/public_html/?name=${value}&apiKey=${APIKEY}`).then(r => r.json()).then(r => {
+    fetch(`${API_ENDPOINT}?name=${value}&apiKey=${APIKEY}`).then(r => r.json()).then(r => {
         cardRow.innerHTML = ""
         errorMsg.innerHTML = "";
         title.innerHTML = "";
@@ -23,12 +24,12 @@ function brainrotShower(value=""){
 
                 <div class="card slide-in shadow-lg p-3 mb-5 bg-body-tertiary rounded" style="min-height: 500px;">
                   <div class="card-body">
-                    <img class="img-fluid mb-3" src="./assets/img/${k.id}.webp">
+                    <img class="img-fluid mb-3" src="${API_ENDPOINT}/img/${k.id}.webp">
                     <h5 class="card-title">${k.name}</h5>
                     <p class="card-text">${k.description}</p>
 
                     <audio controls="" style="width: 85%;" class="mt-3">
-                      <source src="./assets/sounds/${k["id"]}.mp3" type="audio/mpeg">
+                      <source src="${API_ENDPOINT}/sounds/${k["id"]}.mp3" type="audio/mpeg">
                     </audio>
 
                   </div>

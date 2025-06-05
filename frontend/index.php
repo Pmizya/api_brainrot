@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brainrot Gallery</title>
-  <link rel="icon" href="./assets/img/5.webp">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/mainStyle.css">
@@ -13,7 +12,7 @@
 
 <body>
   <video id="video-bg" autoplay muted loop playsinline>
-    <source src="./assets/img/home.mp4" type="video/mp4">
+    <source src="./img/home.mp4" type="video/mp4">
     Il tuo browser non supporta HTML5 video.
   </video>
 
