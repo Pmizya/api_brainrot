@@ -8,9 +8,8 @@ if(!$conn) die("Connection Error -> " . $conn->connect_error);
 define("FILTER_BY", ["name", "description"]);
 
 function clean($v){
-    return htmlspecialchars(str_replace(" ","",trim($v)));
+    return htmlspecialchars(trim($v));
 }
-
 
 function checkAPIKey($apiKey){
     $stmt = $GLOBALS["conn"]->prepare("SELECT * FROM `brainrots_apikeys` WHERE `apiKey` = ?");
