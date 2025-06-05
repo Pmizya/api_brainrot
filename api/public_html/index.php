@@ -41,7 +41,7 @@ if(count($_GET) == 2){ // [filter, apiKey]
 }
 
 else{
-    echo json_encode([]);
+    echo returnError("Missing Parameters");
 }
 
 
